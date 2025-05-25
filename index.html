@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloraInteligente - Descubre el Mundo de las Plantas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 
+      Cambiado <style> a <style type="text/tailwindcss"> 
+      para permitir el uso de @apply con el CDN de Tailwind.
+    -->
+    <style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #f5f5f4; /* stone-100 */
+        }
+        .section-title {
+            @apply text-3xl font-bold text-emerald-700 mb-4 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-stone-600 mb-10 text-center max-w-2xl mx-auto;
+        }
+        .feature-icon {
+            @apply text-3xl text-emerald-600 mb-3;
+        }
+        .cta-button {
+            @apply inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105;
+        }
+        .app-store-badge {
+            @apply inline-block bg-stone-800 text-white py-3 px-6 rounded-lg hover:bg-stone-700 transition duration-300 mr-2 mb-2 sm:mb-0 text-sm;
+        }
+        .screenshot-placeholder-container { /* Renamed from screenshot-placeholder to avoid conflict if @apply didn't work and we needed to expand it */
+            @apply bg-stone-300 rounded-lg shadow-lg w-full h-80 flex items-center justify-center text-stone-500 text-lg overflow-hidden;
+            /* Added overflow-hidden for better image containment if needed */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-stone-800 leading-relaxed">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-emerald-700">FloraInteligente</a>
+            <div>
+                <a href="#download" class="cta-button text-sm">Descargar App</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-bg py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl font-bold text-emerald-800 mb-6">Descubre el mundo de las plantas con FloraInteligente</h1>
+                <p class="text-xl text-stone-700 mb-8">Identifica plantas al instante con tu cámara, conoce si son venenosas o comestibles, y accede a información detallada. ¡Tu guía botánica personal!</p>
+                <a href="#download" class="cta-button">Descarga FloraInteligente Ahora</a>
+                <div class="mt-10">
+                    <div class="bg-stone-300 w-full max-w-xs sm:max-w-sm md:max-w-md h-80 mx-auto rounded-lg shadow-xl flex items-center justify-center p-4">
+                        <img src="https://placehold.co/180x300/F0FDF4/059669?text=App+UI" 
+                             alt="Mockup de la App FloraInteligente" 
+                             class="h-full w-auto object-contain rounded-lg shadow-md"
+                             onerror="this.onerror=null;this.src='https://placehold.co/180x300/F0FDF4/059669?text=Error+Loading+Image';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Características Principales</h2>
+            <p class="section-subtitle">Todo lo que necesitas para explorar y entender el reino vegetal a tu alrededor, de forma segura y sencilla.</p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="feature-icon">📸</div>
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Identificación por IA</h3>
+                    <p class="text-stone-600">Escanea cualquier planta con la cámara de tu móvil y nuestra inteligencia artificial la identificará en segundos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Búsqueda Inteligente</h3>
+                    <p class="text-stone-600">Encuentra plantas por su nombre común o científico en nuestra extensa base de datos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="feature-icon">ℹ️</div>
+                    <h3 class="text-xl font-semibold text-sky-700 mb-2">Información Completa</h3>
+                    <p class="text-stone-600">Accede a detalles cruciales: si es venenosa o comestible, sus usos, cuidados y más.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 bg-stone-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Simple y Rápido</h2>
+            <p class="section-subtitle">Identificar plantas nunca fue tan fácil. Sigue estos sencillos pasos:</p>
+            <div class="grid md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                <div class="p-6">
+                    <div class="bg-emerald-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-semibold text-stone-700 mb-2">Escanea</h3>
+                    <p class="text-stone-600">Apunta tu cámara hacia la planta que deseas identificar.</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-emerald-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-semibold text-stone-700 mb-2">Identifica</h3>
+                    <p class="text-stone-600">Nuestra IA analiza la imagen y te muestra los resultados en segundos.</p>
+                </div>
+                <div class="p-6">
+                    <div class="bg-emerald-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-semibold text-stone-700 mb-2">Aprende</h3>
+                    <p class="text-stone-600">Explora toda la información detallada de la planta identificada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Beneficios para Ti</h2>
+            <p class="section-subtitle">FloraInteligente te empodera con conocimiento y seguridad al interactuar con el mundo natural.</p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex items-start space-x-4 p-4">
+                    <span class="text-2xl text-emerald-600 mt-1">🛡️</span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-700">Seguridad Primero</h3>
+                        <p class="text-stone-600">Identifica rápidamente si una planta es peligrosa o segura, especialmente importante para niños y mascotas.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4 p-4">
+                    <span class="text-2xl text-emerald-600 mt-1">💡</span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-700">Conocimiento a tu Alcance</h3>
+                        <p class="text-stone-600">Aprende sobre la flora local, sus nombres, propiedades y curiosidades. Expande tu cultura botánica.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4 p-4">
+                    <span class="text-2xl text-emerald-600 mt-1">🏞️</span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-700">Compañera de Aventuras</h3>
+                        <p class="text-stone-600">Ideal para tus excursiones, paseos por el jardín o si simplemente sientes curiosidad por una planta.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4 p-4">
+                    <span class="text-2xl text-emerald-600 mt-1">🎓</span>
+                    <div>
+                        <h3 class="text-lg font-semibold text-stone-700">Herramienta Educativa</h3>
+                        <p class="text-stone-600">Útil para estudiantes, educadores y cualquier persona interesada en aprender más sobre botánica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="py-16 bg-stone-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Así se ve FloraInteligente</h2>
+            <p class="section-subtitle">Una interfaz intuitiva y amigable diseñada para una experiencia de usuario excepcional.</p>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="screenshot-placeholder-container">
+                    <img src="https://placehold.co/480x320/F0FDF4/059669?text=Escaneo" 
+                         alt="Captura de Pantalla 1: Escaneo" 
+                         class="w-full h-full object-cover rounded-lg"
+                         onerror="this.onerror=null;this.src='https://placehold.co/480x320/F0FDF4/059669?text=Error+Loading+Image';">
+                </div>
+                <div class="screenshot-placeholder-container">
+                     <img src="https://placehold.co/480x320/F0FDF4/059669?text=Resultado" 
+                          alt="Captura de Pantalla 2: Resultado" 
+                          class="w-full h-full object-cover rounded-lg"
+                          onerror="this.onerror=null;this.src='https://placehold.co/480x320/F0FDF4/059669?text=Error+Loading+Image';">
+                </div>
+                <div class="screenshot-placeholder-container">
+                    <img src="https://placehold.co/480x320/F0FDF4/059669?text=Ficha+Planta" 
+                         alt="Captura de Pantalla 3: Ficha Planta" 
+                         class="w-full h-full object-cover rounded-lg"
+                         onerror="this.onerror=null;this.src='https://placehold.co/480x320/F0FDF4/059669?text=Error+Loading+Image';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="py-20 bg-emerald-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Comienza tu Aventura Botánica Hoy</h2>
+            <p class="text-lg text-emerald-100 mb-8 max-w-xl mx-auto">Descarga FloraInteligente y lleva contigo un experto en plantas a donde quiera que vayas.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="app-store-badge">
+                    <svg class="inline-block w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1396 896q0-109-62.5-169.5t-176.5-60.5q-64 0-121 22.5t-93 67.5-60 100-26 120q0 109 62.5 169.5t176.5 60.5q64 0 121-22.5t93-67.5 60-100 26-120zm204-320q0 13-2.5 41t-2.5 41q0 104-40 200.5t-117 172-177.5 123.5-214 73-222.5 26q-134 0-258.5-40.5t-221-119-160.5-171-77-188.5q-7-29-7-64 0-33 11-76.5t11-76.5q0-106 75-181t181-75q106 0 181 75t75 181q0 73-53 138 104-40 199-40 69 0 133.5 18t106 52.5 74.5 81 41 103.5zM1792 896q0 156-61 298.5t-164 245-245 164-298.5 61q-151 0-289.5-56t-246-158-172.5-229q-29-51-29-102 0-19 3-49.5t3-49.5q0-156 61-298.5t164-245 245-164 298.5-61q151 0 289.5 56t246 158 172.5 229q29 51 29 102z"></path></svg>
+                    <span class="font-bold">APP STORE</span>
+                </a>
+                <a href="#" class="app-store-badge">
+                     <svg class="inline-block w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1408 448l-384 384-384-384-384 384v960q0 40 28 68t68 28h1280q40 0 68-28t28-68v-960l-384-384zm512-64q40 0 68 28t28 68v1344q0 79-49 142t-122 76l-394-393v127q0 40-28 68t-68 28h-1024q-40 0-68-28t-28-68v-127l-394 393q-73-13-122-76t-49-142v-1344q0-40 28-68t68-28h1792zM384 448v-128h128v128h-128zm256 0v-128h128v128h-128zm256 0v-128h128v128h-128zm256 0v-128h128v128h-128z"></path></svg> <span class="font-bold">GOOGLE PLAY</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-800 text-stone-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 FloraInteligente. Todos los derechos reservados.</p>
+            <p class="text-sm">Un proyecto de innovación de estudiantes de la Universidad César Vallejo.</p>
+            <div class="mt-2">
+                <a href="#" class="text-sm text-stone-400 hover:text-emerald-400 px-2">Política de Privacidad (placeholder)</a>
+                <a href="#" class="text-sm text-stone-400 hover:text-emerald-400 px-2">Términos de Servicio (placeholder)</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
